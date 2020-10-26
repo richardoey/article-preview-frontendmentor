@@ -127,7 +127,7 @@ body {
 
 /* Tooltip text content */
 .share-button .share-tooltip-content {
-  visibility: visible;
+  visibility: hidden;
   width: fit-content;
   background-color: var(--very-dark-grayish-blue);
   color: #fff;
