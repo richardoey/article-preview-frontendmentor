@@ -10,6 +10,7 @@ body {
 
 .card {
   background-color: white;
+  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -22,6 +23,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 500px;
@@ -33,6 +35,8 @@ body {
   max-width: 300px;
   max-height: 250px;
   margin: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .row {
@@ -76,8 +80,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   color: var(--desaturated-dark-blue);
-  margin: 5px 0px 12px 0px;
-
+  margin: 5px 0px 20px 0px;
 }
 
 .name {
@@ -127,6 +130,7 @@ body {
 
 /* Tooltip text content */
 .share-button .share-tooltip-content {
+  flex-direction: row;
   visibility: hidden;
   width: fit-content;
   background-color: var(--very-dark-grayish-blue);
@@ -141,18 +145,68 @@ body {
   z-index: 1;
   bottom: 52%; */
 
-   /* Position the tooltip */
-   position: absolute;
-   z-index: 1;
-   bottom: 100%;
-   left: 50%;
-   margin-left: -70px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -70px;
 }
 
 .share-button:hover .share-tooltip-content {
   visibility: visible;
 }
 
+.share-icon {
+  margin: auto 35px auto auto;
+  padding: 10px;
+  width: 15px;
+  height: 13px;
+  /* border-radius: 100%; */
+  background-color: hsl(210, 46%, 95%);
+  z-index: 1;
+}
+
+.share-icon:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: hsl(214, 17%, 51%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.share-button p{
+  margin: 0 15px 0 25px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+
+.fab {
+  margin-right: 5px;
+  font-size: 1.5rem;
+  transition: transform 1.5s;
+  color: #fff;
+}
+
+.fab:hover {
+  cursor: pointer;
+  transform: rotateY(360deg);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 @media (max-width: 600px) {
   .card {
@@ -181,6 +235,11 @@ body {
     max-width: 320px;
     max-height: 200px;
     margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
   }
 
   .row {
@@ -244,4 +303,5 @@ body {
     height: 18px;
     padding: 5px;
   }
+
 }
