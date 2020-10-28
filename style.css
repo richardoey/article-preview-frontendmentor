@@ -6,302 +6,213 @@
 }
 body {
   background-color: var(--light-grayish-blue);
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
 }
 
-.card {
-  background-color: white;
+.main-container {
+  margin: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 50px -10px hsl(212, 23%, 60%);
 }
 
-.row-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 50%;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-}
-
-.row-card img {
-  width: auto;
-  height: auto;
-  max-width: 300px;
-  max-height: 250px;
-  margin: 0;
+.image-container {
+  background-image: url(images/drawers.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-
-.column {
+.title {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.column-5 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 5;
-}
-
-.column-2 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 2;
 }
 
 .title {
   font-weight: 700;
-  font-family: "Manrope", sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
+  margin: 10px 25px 15px;
   color: var(--very-dark-grayish-blue);
-  margin: 18px 0px 9px 0px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
-.caption {
+.description {
   font-weight: 500;
-  font-family: "Manrope", sans-serif;
-  font-size: 12px;
+  font-size: 0.8rem;
+  margin: 10px 25px 15px;
   color: var(--desaturated-dark-blue);
-  margin: 5px 0px 20px 0px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
-.name {
-  max-width: 100%;
+.author-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.author-picture {
+  margin: 0px 10px 10px 25px;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.author-name {
+  margin: 2.5px 0 2.5px 5px;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
   color: var(--very-dark-grayish-blue);
   font-weight: 700;
-  font-size: 14px;
-  font-family: "Manrope", sans-serif;
 }
 
-.avatar img {
-  border-radius: 40px;
-  width: auto;
-  height: auto;
-  max-width: 36px;
-  max-height: 36px;
-}
-
-.date {
-  font-size: 9px;
+.post-date {
+  margin: 0 5px;
+  font-size: 0.8rem;
   font-weight: 500;
-  font-family: "Manrope", sans-serif;
-  color: var(--desaturated-dark-blue); /* Desaturated Dark Blue */
-}
-
-.share-button {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.share-button img {
-  background-color: var(--light-grayish-blue);
-  border-radius: 40px;
-  width: 18px;
-  height: 18px;
-  padding: 5px;
-}
-
-.share-button:hover img {
-  background-color: var(--very-dark-grayish-blue);
-  border-radius: 40px;
-  width: 18px;
-  height: 18px;
-  padding: 5px;
-}
-
-/* Tooltip text content */
-.share-button .share-tooltip-content {
-  flex-direction: row;
-  visibility: hidden;
-  width: fit-content;
-  background-color: var(--very-dark-grayish-blue);
-  color: #fff;
-  text-align: center;
-  justify-content: space-around;
-  padding: 10px;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
-  /* position: absolute;
-  z-index: 1;
-  bottom: 52%; */
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -70px;
-}
-
-.share-button:hover .share-tooltip-content {
-  visibility: visible;
+  color: var(--grayish-blue);
+  letter-spacing: 0.5px;
 }
 
 .share-icon {
   margin: auto 35px auto auto;
   padding: 10px;
   width: 15px;
-  height: 13px;
-  /* border-radius: 100%; */
-  background-color: hsl(210, 46%, 95%);
-  z-index: 1;
+  height: 15px;
+  border-radius: 100%;
+  background-color: var(--light-grayish-blue);
+  z-index: 1; /* z-index to make it appear when share-icon is clicked */
 }
 
 .share-icon:hover {
   cursor: pointer;
-  color: #fff;
-  background-color: hsl(214, 17%, 51%);
+  color: white;
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.share {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  bottom: 75px;
+  width: 300px;
+  height: 75px;
+  background-color: var(--very-dark-grayish-blue);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.share p {
+  margin: 0 15px 0 25px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: var(--grayish-blue);
 }
 
 .hidden {
   visibility: hidden;
 }
 
-.share-button p{
-  margin: 0 15px 0 25px;
-  text-transform: uppercase;
-  font-size: .8rem;
-  letter-spacing: 5px;
-  color: hsl(212, 23%, 69%);
+.fab {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: white;
 }
 
-.fab {
-  margin-right: 5px;
-  font-size: 1.5rem;
-  transition: transform 1.5s;
-  color: #fff;
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .fab:hover {
   cursor: pointer;
-  transform: rotateY(360deg);
+  -moz-animation: spinHorizontal 1.5s infinite linear;
+  -o-animation: spinHorizontal 1.5s infinite linear;
+  -webkit-animation: spinHorizontal 1.5s infinite linear;
+  animation: spinHorizontal 1.5s infinite linear;
 }
 
-
 .attribution {
-  font-size: 11px;
+  margin: 15px auto;
+  font-size: 12px;
   text-align: center;
-  font-family: "Manrope", sans-serif;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(214, 30%, 37%);
 }
 
-@media (max-width: 600px) {
-  .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+@media only screen and (min-width: 925px) {
+  body {
+    padding: 150px 0 0;
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-  }
-
-  .row-card {
-    display: flex;
+  .main-container {
+    margin: 0 auto;
+    height: 260px;
+    width: 700px;
     flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
   }
 
-  .row-card img {
-    width: auto;
-    height: auto;
-    max-width: 320px;
-    max-height: 200px;
-    margin: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-
-  }
-
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
-
-  .mobile-content {
-    padding: 10px 20px;
+  .image-container {
+    margin-bottom: 0;
+    height: 260px;
+    flex-basis: 700px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    background-position: left;
   }
 
   .title {
-    font-weight: 700;
-    font-family: "Manrope", sans-serif;
-    font-size: 16px;
-    color: var(--very-dark-grayish-blue);
-    margin: 18px 0px 0px 0px;
+    margin: 30px 50px 15px 35px;
+    font-size: 1.2rem;
   }
 
-  .name {
-    max-width: 100%;
-    color: var(--very-dark-grayish-blue);
-    font-weight: 700;
-    font-size: 12px;
-    font-family: "Manrope", sans-serif;
+  .description {
+    margin-left: 35px;
+    line-height: 1.4;
+    letter-spacing: 0.25; 
   }
 
-  .avatar img {
-    border-radius: 40px;
-    width: auto;
-    height: auto;
-    max-width: 20px;
-    max-height: 20px;
+  .author-picture {
+    margin-left: 35px;
   }
 
-  .date {
-    font-size: 9px;
-    font-weight: 500;
-    font-family: "Manrope", sans-serif;
-    color: var(--desaturated-dark-blue);
+  .share {
+    position: relative;
+    bottom: 140px;
+    left: 300px;
+    width: 250px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 10px 50px -10px var(--desaturated-dark-blue);
   }
-
-  .share-button {
-    align-items: center;
-    justify-content: center;
+  
+  .arrow-down {
+    position: relative;
+    top: 35px;
+    right: 117px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color:var(--very-dark-grayish-blue) transparent transparent transparent;
   }
-
-  .share-button img {
-    background-color: var(--light-grayish-blue);
-    border-radius: 40px;
-    width: 18px;
-    height: 18px;
-    padding: 5px;
-  }
-
 }

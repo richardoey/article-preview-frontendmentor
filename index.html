@@ -17,41 +17,33 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row-card card">
-      <div class="column">
-        <img src="./images/drawers.jpg" alt="drawers">
-      </div>
-      <div class="column mobile-content">
+  <div class="main-container">
+    <div class="image-container">
 
-        <p class="title"> Shift the overall look and feel by adding these wonderful touches to furniture in your home
-        </p>
+    </div>
 
-        <p class="caption"> Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
-          uninviting. I’ve got some simple tips to help you make any room feel complete. </p>
+    <div class="text-container">
+      <p class="title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</p>
+      <p class="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
+        uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
 
-        <div class="row">
-          <div class="column avatar">
-            <img src="./images/avatar-michelle.jpg" alt="avatar">
-          </div>
-          <div class="column-5">
-            <div class="row name">Michelle Appleton</div>
-            <div class="row date">28 Jun 2020</div>
-          </div>
-          <div class="column-2 share-button">
-            <img src="./images/icon-share.svg" alt="icon_share">
-            <div class="row">
-              <span class="share-tooltip-content">
-                <p>Share</p>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-pinterest"></i>
-              </span>
-            </div>
-          </div>
+      <div class="author-container">
+        <img src="images/avatar-michelle.jpg" alt="avatar-michelle" class="author-picture">
+        <div class="author-name-container">
+          <p class="author-name">Michelle Appleton</p>
+          <p class="post-date">28 Jun 2020</p>
         </div>
+        <i id="share-icon" class="fas fa-share share-icon"></i>
       </div>
     </div>
+  </div>
+
+  <div id="share" class="share hidden">
+    <p>Share</p>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-pinterest"></i>
+    <div class="arrow-down"></div>
   </div>
 
   <div class="attribution">
@@ -59,5 +51,7 @@
     Coded by <a href="https://github.com/richardoey" target="_blank">Richard</a>.
   </div>
 </body>
+
+<script src="index.js"></script>
 
 </html>
